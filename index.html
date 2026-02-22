@@ -8,47 +8,48 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <div id="progress-bar"></div>
 
-  <!-- Header / Navbar -->
- <header class="site-header">
-  <div class="container nav">
-    <div> <h2 class="logo">SameenTech</h2></div>
+<header id="header">
+  <nav class="nav container">
 
-     <!-- <ul class="nav-menu" id="nav-menu">
-    <li><a href="#home" class="nav-link">Home</a></li>
-    <li><a href="#projects" class="nav-link">Projects</a></li>
-    <li><a href="#projects" class="nav-link">Projects</a></li>
-    <li><a href="#contact" class="nav-link">Contact</a></li>
-  </ul>
+    <div class="nav-left">
+      <h2 class="logo">SameenTech</h2>
+    </div>
 
-  <div class="nav-right">
-    <button id="theme-toggle">🌙</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#skills" class="nav-link active">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+<!-- 
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+  🌙
+</button> -->
 
-    <div id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div> -->
+      <button id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
-
-    <button class="menu-toggle" id="menuToggle">
-      ☰
-    </button>
-  </div>
+  </nav>
 </header>
+  
 
+    
+     
 
 
   <!-- Hero -->
   <section class="hero bg">
+    
   <div class="container hero-content ">
-    <h1>Hi, I’m Sameen</h1>
+    <!-- <h1>Hi, I’m Sameen</h1> -->
+     <h1>I am a <span id="typewriter"></span></h1>
     <h2>Frontend Developer</h2>
     
     <p>
@@ -118,99 +119,112 @@
     </div>
   </div>
 </section>
-
+<br>
+<br>
 
   <!-- Projects -->
-  <section id="projects" class="projects">
+  <section class="projects" id="projects">
   <div class="container">
-    <h3 class="project-title">Projects</h3>
 
+    <h2 class="section-title" style="color: #ffffff;">Featured Projects</h2>
+
+    <!-- FILTER TABS -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="js">JavaScript</button>
+      <button class="filter-btn" data-filter="ui">UI/UX</button>
+    </div>
+
+    <!-- PROJECT GRID -->
     <div class="projects-grid">
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./landing page.jpg.jpeg">
-
+      <!-- PROJECT CARD -->
+      <article class="project-card" data-category="All">
+        <div class="project-media">
+          <img src="./Screenshot_2.jpg" alt="Ecommerce">
+          <video src="videos/project1.mp4" muted loop></video>
         </div>
 
         <div class="project-content">
-          <h4>Business Landing Page</h4>
-          <p>
-            A responsive landing page built with semantic HTML and modern CSS.
-            Focused on clean layout and accessibility.
-          </p>
+          <h3>E-Commerce Platform</h3>
+          <p>Advanced store with cart, filters, Stripe integration.</p>
 
           <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Responsive</span>
+            <span>React</span>
+            <span>API</span>
+            <span>Stripe</span>
           </div>
 
-          <div class="project-links">
-            <a href="#" target="_blank">Live Demo</a>
-            <a href="#" target="_blank">Source Code</a>
+          <div class="project-actions">
+            <button class="btn view-btn"><a href="https://portfoliosameen.netlify.app/">Live Demo</a></button>
+            <a href="#" class="btn code">GitHub</a>
           </div>
         </div>
       </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./blogpic.PNG">
+      <article class="project-card" data-category="react">
+        <div class="project-media">
+          <img src="./landing page.jpg.jpeg" alt="Ecommerce">
+          <video src="videos/project1.mp4" muted loop></video>
         </div>
 
         <div class="project-content">
-          <h4>SaaS Homepage</h4>
-          <p>
-            A modern SaaS-style homepage with reusable components
-            and clean UI structure.
-          </p>
+          <h3>Landing Page</h3>
+          <p>Advanced store with cart, filters, Stripe integration.</p>
 
           <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JS</span>
+            <span>React</span>
+            <span>API</span>
+            <span>Stripe</span>
           </div>
 
-          <div class="project-links">
-            <a href="#" target="_https://sameenblog.netlify.app">Live Demo</a>
-            <a href="#" target="_blank">Source Code</a>
+          <div class="project-actions">
+            <button class="btn view-btn">View Details</button>
+            <a href="#" class="btn code">GitHub</a>
           </div>
         </div>
       </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./Screenshot_2.jpg">
+      <article class="project-card" data-category="react">
+        <div class="project-media">
+          <img src="./blogpic.PNG" alt="Ecommerce">
+          <video src="videos/project1.mp4" muted loop></video>
         </div>
 
         <div class="project-content">
-          <h4>Personal Portfolio</h4>
-          <p>
-            My own portfolio website showcasing projects, skills,
-            and responsive layout techniques.
-          </p>
+          <h3>Blog Website</h3>
+          <p>Advanced store with cart, filters, Stripe integration.</p>
 
           <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+            <span>React</span>
+            <span>API</span>
+            <span>Stripe</span>
           </div>
 
-          <div class="project-links">
-            <a href="https://69905d4a4cfd88f84176a0d8--nimble-cuchufli-a8195f.netlify.app/" target="_blank">Live Demo</a>
-            <a href="#" target="_blank">Source Code</a>
+          <div class="project-actions">
+            <button class="btn view-btn">View Details</button>
+            <a href="#" class="btn code">GitHub</a>
           </div>
         </div>
       </article>
+      <!-- COPY MORE CARDS WITH DIFFERENT data-category -->
 
     </div>
   </div>
 </section>
 
+<!-- MODAL -->
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Project Title</h3>
+    <p>Full project description with features and tech stack.</p>
+    <a href="#" class="btn live">Live Demo</a>
+  </div>
+</div>
 
 
   <!-- Contact -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
   <div class="container">
     <h3 class="section-title">Contact</h3>
 
@@ -219,25 +233,26 @@
       Feel free to reach out.
     </p>
 
-    <form class="contact-form" id="contactForm">
+    <form class="contact-form" id="name">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" placeholder="Your Name" required />
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" required />
+        <input type="email" id="email" placeholder="Your Email"required />
       </div>
 
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" rows="5" required></textarea>
+        <textarea id="message"   placeholder="Your Message" rows="5" required></textarea>
       </div>
 
       <button type="submit" class="btn-primary">
-        Send Message
+        Send 
       </button>
+      <p id="form-status"></p>
     </form>
   </div>
 </section>
@@ -247,11 +262,14 @@
   <footer class="footer">
     <p>© <span id="year"></span> SameenTech. All rights reserved.</p>
   </footer>
+  <div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+  </div>
+</div>
 
-  <script src="js/main.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
-
-
-
-
